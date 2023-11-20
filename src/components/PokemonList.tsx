@@ -1,11 +1,11 @@
-import { PokemonType } from "../models/models";
+import { PokemonType } from "../types/pokemon";
 
 export const PokemonList = ({ pokemons }: { pokemons: PokemonType[] }) => {
   return (
     <>
-      {pokemons.map((pokemon) => {
-        return <li key={pokemon.url}>{pokemon.name}</li>;
-      })}
+      {pokemons.map((pokemon) => (
+        <li key={pokemon.url}>{pokemon.name}</li>
+      ))}
     </>
   );
 };
